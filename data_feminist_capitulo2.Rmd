@@ -1,0 +1,500 @@
+---
+title: "Club de lectura R-Ladies Chile"
+subtitle: "Data Feminism"
+author: "Sara Acevedo"
+institute: "R-Ladies Chile"
+date: "01-07-2021"
+output:
+  xaringan::moon_reader:
+    lib_dir: libs
+    css: 
+      - default
+      - rladies
+      - rladies-fonts
+      - hygge
+    seal: false
+    nature:
+      highlightStyle: github
+      highlightLines: true
+      countIncrementalSlides: false
+      ratio: "4:3"
+---
+
+```{r setup, include = FALSE}
+library(knitr)                              # paquete que trae funciones utiles para R Markdown
+library(tidyverse)                          # paquete que trae varios paquetes comunes en el tidyverse
+library(icons)                              # paquete para iconos
+library(kableExtra)                         # paquete kable para tablas
+# opciones predeterminadas
+knitr::opts_chunk$set(echo = FALSE,         # FALSE: los bloques de código NO se muestran
+                      dpi = 300,            # asegura gráficos de alta resolución
+                      warning = FALSE,      # los mensajes de advertencia NO se muestran
+                      error = FALSE)        # los mensajes de error NO se muestran
+```
+
+class: left, bottom
+background-image: url(https://raw.githubusercontent.com/rladies/starter-kit/master/stickers/hex-logo-with-text.png)
+background-position: 94% 10%
+background-size: 15%
+
+
+# `r rmarkdown::metadata$title`
+----
+## **`r rmarkdown::metadata$subtitle`**
+### `r rmarkdown::metadata$author`
+### `r rmarkdown::metadata$date`
+
+---
+name: hola
+class: inverse, middle, center
+
+<img style="border-radius: 50%;" src="https://raw.githubusercontent.com/rladies/starter-kit/master/stickers/hex-logo-with-text.png"
+width="150px"
+/>
+
+# R-Ladies Chile 
+
+## [Santiago + Valparaíso + Concepción + Talca]
+
+[`r icons::fontawesome("link")` https://github.com/rladieschile](https://github.com/rladieschile)<br/>
+[`r icons::fontawesome("twitter")` RLadiesSantiago](https://twitter.com/RLadiesSantiago)<br/>
+[`r icons::fontawesome("twitter")` RLadiesValparaiso](https://twitter.com/RLadiesValparaiso)<br/>
+[`r icons::fontawesome("twitter")` RLadiesConce](https://twitter.com/RLadiesConce)<br/>
+[`r icons::fontawesome("twitter")` RLadiesTalca](https://twitter.com/RLadiesTalca)
+
+---
+
+.pull-left[
+## Data Feminism
+* Catherine D'Ignazio [`r icons::fontawesome("twitter")` kanarinka](https://twitter.com/kanarinka)
+* Lauren Klein [`r icons::fontawesome("twitter")` laurenfklein](https://twitter.com/laurenfklein)
+* [Acceso gratuito al libro](https://data-feminism.mitpress.mit.edu/) 
+
+]
+
+.pull-right[
+<img style="border-radius: 150%;" src="https://resize-v3.pubpub.org/eyJidWNrZXQiOiJhc3NldHMucHVicHViLm9yZyIsImtleSI6Ijc2cmhranBjLzExNTgyNjgxMTcxMDAyLmpwZyIsImVkaXRzIjp7InJlc2l6ZSI6eyJ3aWR0aCI6NjAwLCJmaXQiOiJpbnNpZGUiLCJ3aXRob3V0RW5sYXJnZW1lbnQiOnRydWV9fX0="
+width="450px"
+/>
+]
+
+---
+class: inverse, middle
+
+# Avance en el club de lectura
+----
+
+.pull-left[
+
+1. Introduction: Why Data Science Needs Feminism
+
+2. The Power Chapter [**(video acá)**](https://vimeo.com/558785342)
+
+3. Hoy: **Collect, Analyze, Imagine, Teach**
+
+.pull-right[
+
+]
+
+] 
+
+---
+class: inverse, middle
+
+# Conceptos e ideas principales
+
+----
+
+.pull-left[
+
+## Capítulos
+
+1. Introduction: Why Data Science Needs Feminism
+
+2. The Power Chapter
+
+3. Collect, Analyze, Imagine, Teach
+
+
+]<!--end of left-column-->
+
+.pull-right[
+
+## Principios
+
+.left[
+1. Contexto: porqué la ciencia de datos necesita feminismo
+
+2. Examinar estructuras de poder
+
+3. Desafiar estas estructuras y trabajar para eliminar estas desigualdades
+
+]
+
+] <!--end of right-column-->
+
+---
+
+
+class: inverse,  middle, center
+
+# **Principle: Challenge Power**
+
+
+
+---
+
+.pull-left[
+<img src="https://resize-v3.pubpub.org/eyJidWNrZXQiOiJhc3NldHMucHVicHViLm9yZyIsImtleSI6Inhtd2F3Z2MyLzIxNTgzODg3Njg1ODkyLmpwZyIsImVkaXRzIjp7InJlc2l6ZSI6eyJ3aWR0aCI6ODAwLCJmaXQiOiJpbnNpZGUiLCJ3aXRob3V0RW5sYXJnZW1lbnQiOnRydWV9fX0=">
+]
+
+
+.pull-right[
+<img src="https://resize-v3.pubpub.org/eyJidWNrZXQiOiJhc3NldHMucHVicHViLm9yZyIsImtleSI6ImZuaHo3OG9jLzQxNTgzODg3Njg1ODk3LmpwZWciLCJlZGl0cyI6eyJyZXNpemUiOnsid2lkdGgiOjgwMCwiZml0IjoiaW5zaWRlIiwid2l0aG91dEVubGFyZ2VtZW50Ijp0cnVlfX19">
+]
+
+---
+
+.pull-left[
+<img src="https://resize-v3.pubpub.org/eyJidWNrZXQiOiJhc3NldHMucHVicHViLm9yZyIsImtleSI6Inhtd2F3Z2MyLzIxNTgzODg3Njg1ODkyLmpwZyIsImVkaXRzIjp7InJlc2l6ZSI6eyJ3aWR0aCI6ODAwLCJmaXQiOiJpbnNpZGUiLCJ3aXRob3V0RW5sYXJnZW1lbnQiOnRydWV9fX0=">
+]
+
+
+.pull-right[
+1. Detroit Geographic Expedition and Institute (DGEI, 1971)
+2. Where Commuters Run Over Black Children on the Pointes-Downtown Track
+3. Black dots = where the children were killed
+4. Gwendolyn Warren: Detroit-based organizer: **“We couldn’t get that information”**
+]
+
+---
+.pull-left[
+1. Detroit Board of Commerce
+2. Residential Security Map
+3. *Redlining* = how banks rated the risk of granting loans
+4. All of Detroit’s Black neighborhoods fall into red areas
+]
+
+
+.pull-right[
+<img src="https://resize-v3.pubpub.org/eyJidWNrZXQiOiJhc3NldHMucHVicHViLm9yZyIsImtleSI6ImZuaHo3OG9jLzQxNTgzODg3Njg1ODk3LmpwZWciLCJlZGl0cyI6eyJyZXNpemUiOnsid2lkdGgiOjgwMCwiZml0IjoiaW5zaWRlIiwid2l0aG91dEVubGFyZ2VtZW50Ijp0cnVlfX19">
+]
+
+---
+
+class: inverse, middle, right
+
+#Who **makes** maps and who **gets mapped**? 
+##¿quién **hace los mapas** y quién es **mapeado**?
+
+---
+
+### Taking action can itself take many forms
+
+--
+
+.left-col[.center[
+`r icons::icon_style(icons::fontawesome("database"), scale = 1)`
+### Collect: Compiling **counterdata**
+]]
+
+--
+
+.center-col[
+.center[
+`r icons::icon_style(icons::fontawesome("chart-bar"), scale = 1)`
+### Analyze: **Challenging power**
+]]
+
+--
+
+.center-col[
+.center[
+`r icons::icon_style(icons::fontawesome("lightbulb"), scale = 1)`
+### Imagine: **not** only focus on inequitable outcomes
+]]
+
+--
+
+.right-col[.center[
+`r icons::icon_style(icons::fontawesome("female"), scale = 1)`
+###  Teach: The identities of data scientists **matter**
+]]
+
+---
+
+class: inverse, center, middle
+
+# **Analyze and Expose Oppression**
+
+---
+.pull-left[
+##Risk assessment algorithms
+1. Algorithms are neither **neutral** nor **objective**.
+2. Algorithms don’t just predict the past; they also **reflect** current social inequities
+3. Concept: algorithm **auditing** 
+]
+
+
+.pull-right[
+## Correctional Offender Management Profiling for Alternative Sanctions (COMPAS)
+<img src="https://resize-v3.pubpub.org/eyJidWNrZXQiOiJhc3NldHMucHVicHViLm9yZyIsImtleSI6InN2OWtiZ2FhLzIxNTgzODg3Njg1ODk4LmpwZyIsImVkaXRzIjp7InJlc2l6ZSI6eyJ3aWR0aCI6ODAwLCJmaXQiOiJpbnNpZGUiLCJ3aXRob3V0RW5sYXJnZW1lbnQiOnRydWV9fX0=">
+]
+
+---
+##Prediction Fails Differently for Black Defendants
+```{r}
+propublica <- data.frame(Prediction = c("Labeled Higher Risk, But Didn’t Re-Offend","Labeled                             Lower Risk, Yet Did Re-Offend"),
+                  White  = c("23.5%","47.7%"),
+                  African_American = c("44.9%","28.0%"))
+
+knitr::kable(head(propublica), format = 'html') %>%
+  kable_styling(full_width = F, font_size = 18)
+
+```
+#### Overall, Northpointe’s assessment tool correctly predicts recidivism 61 percent of the time. But blacks are almost twice as likely as whites to be labeled a higher risk but not actually re-offend. It makes the opposite mistake among whites.
+
+.footnote[Fuente: [Propublica](https://www.propublica.org/article/machine-bias-risk-assessments-in-criminal-sentencing)]
+---
+
+### RETRACTED ARTICLE: The association between early career informal mentorship in academic collaborations and junior author performance
+
+
+<img src="https://media.springernature.com/lw685/springer-static/image/art%3A10.1038%2Fs41467-020-19723-8/MediaObjects/41467_2020_19723_Fig3_HTML.png?as=webp"
+width="500px">
+
+
+.footnote[Fuente: [nature.com](https://doi.org/10.1038/s41467-020-20617-y)]
+
+---
+
+### RETRACTED ARTICLE: The association between early career informal mentorship in academic collaborations and junior author performance
+
+####These results suggest that, by mentoring female instead of male protégés, the female mentors compromise their gain from mentorship, and suffer on average a loss of 18% in citations on their mentored papers. As for male mentors, their gain does not appear to be significantly affected by taking female instead of male protégés.
+
+.footnote[Fuente: [nature.com](https://doi.org/10.1038/s41467-020-20617-y)]
+
+---
+
+class: inverse, center, middle
+
+# **The Pitfalls of Proof**
+
+---
+.pull-left[
+## Data-driven revelations
+1. Data-based evidence can be **minimized**
+2. Deficit narratives: reduce a group its **problems** rather than **strengths**
+]
+
+
+.pull-right[
+## Improving Gender Data to Advance Gender Equality
+<img src="https://data2x.org/wp-content/uploads/2021/06/image.png">
+]
+
+.footnote[Fuente: [Data2x](https://data2x.org/improving-gender-data-to-advance-gender-equality-lessons-learned-from-data2x-and-open-data-watchs-bridging-the-gap-studies/)]
+
+---
+
+class: inverse, center, middle
+
+# **Envision Equity, Imagine Co-liberation**
+
+---
+##Table 2.1: From data ethics to data justice
+```{r}
+tabla <- data.frame(a = c("Ethics","Bias","Fairness","Accountability","Transparency","Understanding algorithms"), b  = c("Justice","Oppression","Equity","Co-liberation","Reflexivity","Understanding history, culture, and context"))
+
+knitr::kable(head(tabla), format = 'html',col.names = c('Concepts That Secure Power<br>Because they locate the source of the problem in individuals or technical systems',
+"Concepts That Challenge Power<br>Because they acknowledge structural power differentials and work toward dismantling them"), escape = FALSE) %>%
+  kable_styling(full_width = F, font_size = 18)
+
+```
+
+---
+
+class: inverse, center, middle
+
+# **Teach Data Like an Intersectional Feminist**
+
+---
+```{r, fig.height=5}
+library(waffle)
+
+# dummy sample
+basedata <- c('men'= 67,
+              'women'=  33)
+
+# Waffle chart
+waffle(
+  basedata,
+  rows = 10 ,
+  colors =  c("#E69F00","#999999"),
+  xlab = "each square represents 1%"
+) +
+  theme(
+    plot.title = element_text(hjust = 0.5, size = 27, face = "bold"),
+    legend.text = element_text(size = 15),
+    legend.position = "bottom"
+  )
+```
+
+Women faculty comprise less than a third of computer science and statistics faculty. More than 80 percent of artificial intelligence professors are men.
+
+---
+
+```{r, fig.height=5}
+library(waffle)
+
+# dummy sample
+basedata <- c('men'= 81,
+              'women'=  19)
+
+# Waffle chart
+waffle(
+  basedata,
+  rows = 10 ,
+  colors =  c("#E69F00","#999999"),
+  xlab = "each square represents 1%"
+) +
+  theme(
+    plot.title = element_text(hjust = 0.5, size = 27, face = "bold"),
+    legend.text = element_text(size = 15),
+    legend.position = "bottom"
+  )
+```
+
+More than 80 percent of artificial intelligence professors are men.
+
+---
+class: center
+
+<img src=https://www.economist.com/img/b/1000/1139/90/sites/default/files/20170311_WOC142.png width="500px"/> 
+
+.footnote[Fuente: [The Economist 2017](https://www.economist.com/graphic-detail/2017/03/10/the-gender-gap-in-science)]
+
+---
+
+class: inverse, center, middle
+
+# **Man Factory**
+
+---
+.pull-left[
+##Man factory
+1. Really good at producing men
+2. It’s not as good at producing women data scientists, or nonbinary data scientists, or data scientists of color
+3. Deficit narrative: “Why are there so few women computer scientists?” 
+]
+
+
+.pull-right[
+<img src="http://blogs.nature.com/soapboxscience/files/2014/09/Leaky-Pipeline-in-STEM-Blog-Pic-682x1024.png">
+[Fuente: nature blogs](http://blogs.nature.com/soapboxscience/2014/09/04/nature-vs-nurture-girls-and-stem)
+]
+
+---
+
+.pull-left[
+<img src="https://resize-v3.pubpub.org/eyJidWNrZXQiOiJhc3NldHMucHVicHViLm9yZyIsImtleSI6InR5bmR3eWxnLzcxNTgzODg3Njg1ODk5LmpwZyIsImVkaXRzIjp7InJlc2l6ZSI6eyJ3aWR0aCI6ODAwLCJmaXQiOiJpbnNpZGUiLCJ3aXRob3V0RW5sYXJnZW1lbnQiOnRydWV9fX0=">
+]
+
+
+.pull-right[
+<img src="https://resize-v3.pubpub.org/eyJidWNrZXQiOiJhc3NldHMucHVicHViLm9yZyIsImtleSI6InZ4NjB5d2d2LzExNTg0MzYxMzMxNTg3LmpwZWciLCJlZGl0cyI6eyJyZXNpemUiOnsid2lkdGgiOjgwMCwiZml0IjoiaW5zaWRlIiwid2l0aG91dEVubGFyZ2VtZW50Ijp0cnVlfX19">
+]
+
+
+---
+
+.pull-left[
+### Local Lotto project
+1. data-driven question: “Is the lottery good or bad for your neighborhood?”
+2. Laurie Rubel: mathematics for spatial justice
+3. Teach data sciences,maths and more +
+]
+
+
+.pull-right[
+### Data from tickets:
+1. Tickets are not purchased equally across all income areas
+2. Revenue from purchases is not allocated back to the places they live
+3. Low-wage workers buy more tickets than their higher-earning counterparts
+4. Scholars hypothesis: Poverty tax
+]
+
+
+---
+
+## Challenge power
+
+--
+
+.left-col[.center[
+`r icons::icon_style(icons::fontawesome("search"), scale = 1)`
+### Examine power
+]]
+
+--
+
+.center-col[
+.center[
+`r icons::icon_style(icons::fontawesome("map"), scale = 1)`
+### Collecting **counterdata** as Gwendolyn Warren and the DGEI 
+]]
+
+--
+
+.center-col[
+.center[
+`r icons::icon_style(icons::fontawesome("network-wired"), scale = 1)`
+### Analyzing **biased** algorithms as Julia Angwin and ProPublica 
+]]
+
+--
+
+.right-col[.center[
+`r icons::icon_style(icons::fontawesome("female"), scale = 1)`
+###  Data alone do not always lead to change
+]]
+
+---
+##Extra 
+```{r echo = FALSE}
+knitr::include_graphics("img/paper.png",
+                        dpi = 5)
+```
+.footnote[Fuente: [D'Ignazio and Klein 2020](https://journals.sagepub.com/doi/10.1177/2053951720942544)]
+---
+
+name: adios
+class: middle, inverse
+
+.pull-left[
+# **¡Gracias por su atención!**
+# **Ahora comentemos**
+<br/>
+## R-Ladies Chile
+
+### Club de lectura
+]
+
+.pull-right[
+.right[
+<img style="border-radius: 30%;" src="https://raw.githubusercontent.com/rladies/starter-kit/master/stickers/hex-logo-with-text.png"
+width="150px"
+/>
+
+# R-Ladies Chile 
+
+## [Santiago + Valparaíso + Concepción + Talca]
+
+[`r icons::fontawesome("link")` https://github.com/rladieschile](https://github.com/rladieschile)<br/>
+[`r icons::fontawesome("twitter")` RLadiesSantiago](https://twitter.com/RLadiesSantiago)<br/>
+[`r icons::fontawesome("twitter")` RLadiesValparaiso](https://twitter.com/RLadiesValparaiso)<br/>
+[`r icons::fontawesome("twitter")` RLadiesConce](https://twitter.com/RLadiesConce)<br/>
+[`r icons::fontawesome("twitter")` RLadiesTalca](https://twitter.com/RLadiesTalca)
+
+]
+]
